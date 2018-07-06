@@ -62,6 +62,6 @@ func (c *Client) SendMessage(msg slack.Msg) error {
 	return fmt.Errorf(
 		"slackhook: received erroneous response (code: %v, body: %v)",
 		resp.StatusCode,
-		respBody,
+		string(respBody),
 	)
 }
